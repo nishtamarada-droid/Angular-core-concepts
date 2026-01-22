@@ -1,0 +1,42 @@
+<div class="container">
+
+  <h1>Get and Set Input Fields</h1>
+
+  <!-- Name Section -->
+  <div class="card">
+    <h2>User Name</h2>
+
+    <input
+      type="text"
+      placeholder="Enter User Name"
+      [value]="name"
+      (input)="getName($event)"
+    />
+
+    <div class="buttons">
+      <button (click)="displayName()">Get Value</button>
+      <button (click)="SetName()">Set Value</button>
+    </div>
+
+    <p class="output">Displayed Name: <strong>{{ displayname }}</strong></p>
+  </div>
+
+  <!-- Email Section -->
+  <div class="card">
+    <h2>Email (ngModel)</h2>
+
+    <input
+      type="text"
+      placeholder="Enter Email"
+      [(ngModel)]="email"
+    />
+
+    <div class="buttons">
+      <button (click)="getEmail()">Get Email</button>
+      <button (click)="setEmail()">Set Email</button>
+    </div>
+
+    <p class="output">Email Value: <strong>{{ email }}</strong></p>
+  </div>
+
+</div>
