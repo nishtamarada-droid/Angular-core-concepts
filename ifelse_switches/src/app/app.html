@@ -1,0 +1,90 @@
+<h1 class="title">
+  @If, @Else, @ElseIf, @Switch, @Case – Control Flow Demo
+</h1>
+
+<!-- Show / Hide Section -->
+<div class="section">
+  <button (click)="show()">Show</button>
+  <button (click)="hide()">Hide</button>
+  <button (click)="toggle1()">Toggle</button>
+
+  @if (display) {
+    <div class="box green"></div>
+  }
+</div>
+
+<hr />
+
+<!-- Toggle Section -->
+<div class="section">
+  <button (click)="toggle2()">
+    {{ togglee ? 'Show Blue' : 'Show Red' }}
+  </button>
+
+  @if (togglee) {
+    <div class="box red"></div>
+  } @else {
+    <div class="box blue"></div>
+  }
+</div>
+
+<hr />
+
+<!-- IF / ELSE-IF Color Section -->
+<div class="section">
+  <h3>Using if / else if</h3>
+
+  <button (click)="manageColor(1)">Brown</button>
+  <button (click)="manageColor(2)">Green</button>
+  <button (click)="manageColor(3)">Orange</button>
+  <button (click)="manageColor(4)">Blue Violet</button>
+
+  <input
+    type="number"
+    [(ngModel)]="color"
+    placeholder="Enter color number (1–4)"
+  />
+
+  @if (color === 1) {
+    <div class="box brown"></div>
+  } @else if (color === 2) {
+    <div class="box green"></div>
+  } @else if (color === 3) {
+    <div class="box orange"></div>
+  } @else {
+    <div class="box violet"></div>
+  }
+</div>
+
+<hr />
+
+
+<div class="section">
+  <h3>Using Switch and Case </h3>
+
+  <button (click)="setSwitchColor(1)">Brown</button>
+  <button (click)="setSwitchColor(2)">Green</button>
+  <button (click)="setSwitchColor(3)">Orange</button>
+  <button (click)="setSwitchColor(4)">Blue Violet</button>
+
+  <input
+    type="number"
+    [(ngModel)]="switchColor"
+    placeholder="Enter color number (1–4)"
+  />
+
+  @switch (switchColor) {
+    @case (1) {
+      <div class="box brown"></div>
+    }
+    @case (2) {
+      <div class="box green"></div>
+    }
+    @case (3) {
+      <div class="box orange"></div>
+    }
+    @default {
+      <div class="box violet"></div>
+    }
+  }
+</div>
