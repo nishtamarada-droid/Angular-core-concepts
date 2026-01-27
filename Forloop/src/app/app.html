@@ -1,0 +1,19 @@
+<h1> @For Loop </h1>
+
+
+<ul>
+
+  @for(item of list; track item){
+
+  <li>{{item}}</li>
+  }
+</ul>
+
+<hr>
+<span>
+  @for(info of data;track info){
+  <li>{{info.name}} , {{info.age}}, {{info.email}}</li>
+  <button (click)="getid(info.age)">getid</button>
+  }
+
+</span>

@@ -1,0 +1,126 @@
+/* =========================
+   Global Reset & Base Style
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2f7, #dbeafe);
+    padding: 40px;
+    color: #1f2933;
+}
+
+/* =========================
+   Heading
+   ========================= */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #0f172a;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   List Styling
+   ========================= */
+ul {
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    padding: 0;
+    list-style: none;
+
+    li {
+        background: #ffffff;
+        padding: 14px 18px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        font-weight: 500;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+    }
+}
+
+/* =========================
+   Divider
+   ========================= */
+hr {
+    max-width: 700px;
+    margin: 40px auto;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #94a3b8, transparent);
+}
+
+/* =========================
+   Data Section
+   ========================= */
+span {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+
+    li {
+        list-style: none;
+        background: #ffffff;
+        padding: 18px 20px;
+        border-radius: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+        transition: all 0.25s ease;
+
+        &:hover {
+            background: #f8fafc;
+            transform: scale(1.01);
+        }
+    }
+
+    button {
+        background: linear-gradient(135deg, #2563eb, #1e40af);
+        color: #ffffff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s ease;
+
+        &:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 600px) {
+    span li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        align-self: flex-end;
+    }
+}
