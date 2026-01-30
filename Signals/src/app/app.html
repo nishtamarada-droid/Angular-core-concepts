@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Angular Signals Practice</h1>
+
+  <div class="card">
+    <p class="label">Current Count</p>
+    <h2>{{ count() }}</h2>
+
+    <p class="label">Double Count (Computed)</p>
+    <h3>{{ doubleCount() }}</h3>
+
+    <div class="buttons">
+      <button class="btn primary" (click)="increment()">+ Increment</button>
+      <button class="btn secondary" (click)="decrement()">- Decrement</button>
+      <button class="btn danger" (click)="reset()">Reset</button>
+    </div>
+
+    <div class="step">
+      <p>Step Value: <strong>{{ step() }}</strong></p>
+      <button class="btn small" (click)="increaseStep()">Increase Step</button>
+    </div>
+  </div>
+</div>
